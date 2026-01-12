@@ -1,0 +1,102 @@
+# ---------------------------
+# JetBrains Rider / IntelliJ
+# ---------------------------
+.idea/
+.idea/*
+*.iml
+*.ipr
+*.iws
+
+# Rider-specific project files
+.idea/.idea.*
+.idea/workspace.xml
+.idea/tasks.xml
+.idea/dictionaries
+.idea/httpRequests/
+.idea/shelf/
+.idea/modules.xml
+.idea/.name
+
+# ---------------------------
+# Build & Output Directories
+# ---------------------------
+bin/
+obj/
+out/
+[Bb]uild/
+[Ll]ogs/
+
+# ---------------------------
+# User-specific Files
+# ---------------------------
+*.user
+*.userosscache
+*.suo
+*.userprefs
+*.csproj.user
+*.rsuser
+
+# ---------------------------
+# Visual Studio / Rider Cache
+# ---------------------------
+.vs/
+_ReSharper*/
+_ReSharper.Caches/
+*.DotSettings.user
+*.ncrunchsolution
+*.ncrunchproject
+.idea/.idea.*
+*.sln.iml
+
+# ---------------------------
+# Temporary & Backup Files
+# ---------------------------
+*.tmp
+*.bak
+*.swp
+*.swo
+*~
+*.orig
+
+# ---------------------------
+# Packages & Dependencies
+# ---------------------------
+# NuGet
+packages/
+*.nupkg
+*.snupkg
+*.nuspec
+project.lock.json
+
+# Node (if applicable)
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+package-lock.json
+
+# Python virtual env (if using Rider for Python)
+venv/
+__pycache__/
+
+# ---------------------------
+# OS Files
+# ---------------------------
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Linux
+*~
+TestResults/
+.sonarqube/
+
+firebase-key.json
+
+.env

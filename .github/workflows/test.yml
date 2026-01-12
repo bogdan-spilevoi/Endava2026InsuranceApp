@@ -1,0 +1,40 @@
+name: .NET Tests
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  test:
+    strategy:
+      matrix:
+        os: [ubuntu-latest, windows-latest]
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: 9.0.x
+          cache: true
+          cache-dependency-path: |
+            **/packages.lock.json
+            **/*.csproj
+
+      - name: Restore
+        run: dotnet restore
+
+      - name: Build (Release)
+        run: dotnet build --configuration Release --no-restore
+
+      - name: Test (with coverage)
+        run: dotnet test --configuration Release --no-build --verbosity normal --logger "trx;LogFileName=test_results.trx" --collect "XPlat Code Coverage" --filter "Category!=LocalIntegration"
+
+      - name: Upload test results
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: test-results-${{ runner.os }}
+          path: |
+            **/TestResults/*.trx
+            **/TestResults/**/coverage.cobertura.xml
