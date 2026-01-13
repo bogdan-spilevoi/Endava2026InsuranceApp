@@ -1,0 +1,11 @@
+namespace InsuranceApp.Domain.Results;
+
+public enum ErrorKind
+{
+    Failure = 0,
+    Validation = 1,
+    NotFound = 2,
+    Conflict = 3,
+    Unauthorized = 4,
+    Forbidden = 5
+}

@@ -1,10 +1,9 @@
 namespace InsuranceApp.Domain.Common;
 
-public abstract class Entity<TId>
+public abstract class Entity<TId>(TId id)
         where TId : notnull
 {
-    protected Entity(TId id) => Id = id;
-    public TId Id { get; }
+    public TId Id { get; } = id;
     public override bool Equals(object? obj)
         => obj is Entity<TId> other && EqualityComparer<TId>.Default.Equals(Id, other.Id);
 

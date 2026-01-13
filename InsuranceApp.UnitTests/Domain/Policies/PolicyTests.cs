@@ -1,7 +1,6 @@
 using FluentAssertions;
 using InsuranceApp.Domain.Common;
 using InsuranceApp.Domain.Enums;
-using InsuranceApp.Domain.Policies;
 using InsuranceApp.Domain.ValueObjects;
 
 namespace InsuranceApp.UnitTests.Domain.Policies;

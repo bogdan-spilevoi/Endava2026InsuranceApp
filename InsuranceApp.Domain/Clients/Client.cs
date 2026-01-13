@@ -1,5 +1,6 @@
 using InsuranceApp.Domain.Common;
 using InsuranceApp.Domain.Enums;
+using InsuranceApp.Domain.Repositories;
 using InsuranceApp.Domain.ValueObjects;
 
 namespace InsuranceApp.Domain.Clients;

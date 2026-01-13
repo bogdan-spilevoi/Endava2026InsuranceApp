@@ -2,7 +2,6 @@ using FluentAssertions;
 using InsuranceApp.Domain.Clients;
 using InsuranceApp.Domain.Enums;
 using InsuranceApp.Domain.ValueObjects;
-using Xunit;
 
 namespace InsuranceApp.UnitTests.Domain.Clients;
 
